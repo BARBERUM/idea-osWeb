@@ -7,11 +7,11 @@ import footerComponent from './components/footerComponent.vue';
   <div id="app">
     <headComponent />
     <main>
-      <router-view v-slot="{ Component, route }">
-        <transition :name="route.meta.transition || 'fade'" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
+        <router-view v-slot="{ Component, route }">
+          <transition :name="route.meta.transition || 'fade'" mode="out-in">
+            <component :is="Component" />
+          </transition>
+        </router-view>
     </main>
     <footerComponent />
   </div>
@@ -19,13 +19,14 @@ import footerComponent from './components/footerComponent.vue';
 
 <style>
 #app {
+
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* 保证页面高度始终填满屏幕 */
   text-align: center;
 }
-
 main {
+
   flex: 1; /* 让主内容区域自动撑开剩余空间 */
 }
 
